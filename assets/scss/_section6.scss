@@ -1,0 +1,235 @@
+// main: main.scss
+
+.main__section6 {
+  background-color: var(--primarygreen);
+  color: var(--primarywhite);
+
+  &__content {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  &__title {
+    margin: 100px 0px 20px;
+  }
+
+  @media screen and (min-width: 425px) and (max-width: 748px) {
+    &__title {
+      font-size: 36px
+    }
+  }
+
+  @media screen and (max-width: 424px) {
+    &__title {
+      font-size: 28px;
+      margin: 80px 0px 20px;
+    }
+  }
+
+  &__subtitle {
+    width: 306px;
+    color: rgba(255, 255, 255, .8);
+    font-size: 16px;
+    line-height: 23.2px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 639px) and (max-width: 748px) {
+    &__subtitle {
+      width: 266px;
+    }
+  }
+
+  @media screen and (max-width: 638px) {
+    &__subtitle {
+      width: 300px;
+    }
+  }
+}
+
+.main__section6__content__project {
+  display: flex;
+}
+
+@media screen and (max-width: 639px) {
+  .main__section6__content__project {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main__section6__img {
+  width: 800px;
+  height: 696px;
+}
+
+.form--project {
+  position: relative;
+}
+
+@media screen and (max-width: 639px) {
+  .form--project {
+    margin-bottom: 10px;
+  }
+}
+
+.form--project, .main__section6__img {
+  flex: 1;
+}
+
+.project--content {
+  position: absolute;
+  width: 100%;
+  max-width: 623.5px;
+  padding-left: 20px;
+  right: 0;
+}
+
+@media screen and (max-width: 639px) {
+  .project--content {
+    position: static;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (min-width: 639px) and (max-width: 748px) {
+  .project--content {
+    padding-right: 34px;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .project--content {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.project--form {
+  width: 300px;
+}
+
+@media screen and (min-width: 639px) and (max-width: 680px) {
+  .project--form {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .project--form {
+    padding: 0px;
+  }
+}
+
+.project--form input {
+  width: 100%;
+  padding: 10px 0px;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  color: var(--primarywhite);
+  font-size: 16px;
+}
+
+.project--form input[type='file'] {
+  display: none;
+}
+
+.project--form input:nth-child(2) {
+  margin-top: 25px;
+}
+
+.project--form input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, .5);
+}
+
+.project--file {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 25px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, .5);
+  margin-bottom: 40px;
+
+  & img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(50%);
+  }
+}
+
+.project--form__btn {
+  @include info-btn(700, 'normal', 16px, 100%, 60px);
+  background-color: var(--primarybrown);
+  margin-bottom: 25px;
+}
+
+.agreement {
+  width: 101%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  & .square-radio {
+    position: relative;
+    min-width: 15px;
+    height: 15px;
+    margin: 2px;
+    border: 2px solid var(--primarywhite);
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .agreement {
+    margin-bottom: 61px;
+  }
+}
+
+@media screen and (min-width: 639px) and (max-width: 680px) {
+  .agreement {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 638px) {
+  align-items: center;
+}
+
+
+
+.square-radio__clicked .square-radio__content {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--primarywhite);
+}
+
+.main__section6__img img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 639px) {
+  .main__section6__img {
+    display: flex;
+    width: 100%;
+
+    .main__section6__img img {
+    }
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 748px) {
+  .main__section6__img img {
+    object-position: left;
+  }
+}

@@ -1,0 +1,254 @@
+// main: main.scss
+.main {
+  margin-top: 84px;
+}
+
+.title {
+  display: block;
+  width: 446px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 67.2px;
+  text-transform: uppercase;
+  color: var(--primarywhite);
+  margin: 120px 0px 20px 0;
+}
+
+.title2 {
+  display: block;
+  width: 849px
+}
+
+@media screen and (min-width: 631px) and (max-width: 840px) {
+  .title2 {
+    width: 446px;
+  }
+}
+
+.subtitle {
+  display: block;
+  width: 537px;
+  font-family: "Raleway", sans-serif;
+  color: var(--primarygrey);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0px 0px 50px 0px;
+}
+
+.subtitle2 {
+  display: block;
+  width: 639px;
+}
+
+.circle {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primarywhite);
+  border-radius: 50%;
+  padding: 3%;
+  opacity: 0.4;
+  text-align: center;
+  transition: 1s;
+}
+
+.circle.active {
+  opacity: 1;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  max-height: 687px;
+  overflow: hidden;
+
+  &__line {
+    display: flex;
+    transition: all ease 1s;
+  }
+
+  &__menu {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto 43px;
+    border-top: 2px solid rgba(255, 255, 255, .2);
+    padding-top: 25px;
+    color: var(--primarywhite);
+
+    &__btn {
+      display: flex;
+      gap: 25px;
+
+      & svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      & svg * {
+        fill: var(--primarywhite);
+        transition: fill 0.1s;
+      }
+
+      & .arrow:hover svg * {
+        fill: var(--primarybrown);
+      }
+
+      @media screen and (max-width: 1000px) {
+        & .arrow:hover svg * {
+          fill: var(--primarywhite);
+        }
+      }
+    }
+
+    &__navigation {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    &__options {
+      justify-content: center;
+      margin: 0 auto 15px;
+      padding-top: 15px;
+
+
+      &__btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 530px) and (max-width: 630px) {
+  .title {
+    margin: 75px 0px 20px 0;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 529px) {
+  .title {
+    margin: 40px 0px 20px 0;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 630px) {
+  .title {
+    width: 346px;
+    line-height: 45px;
+    font-size: 36px;
+  }
+
+  .title2 {
+    width: 300px
+  }
+
+  .subtitle {
+    width: 400px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .subtitle2 {
+    width: 350px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .slider {
+    &__options {
+      padding-top: 15px;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    margin-bottom: auto;
+    z-index: 2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 1200px;
+  }
+
+  &__btn-info {
+    @include info-btn(700, 'normal', 16px, 260px, 60px)
+    background-color: var(--primarybrown);
+    transition: background-color .2s;
+  }
+
+  &__btn-info:hover {
+    background-color: var(--primarylightbrown);
+  }
+
+  & .shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .title {
+    width: 296px;
+    font-size: 28px;
+    font-size: 29px;
+    margin: 70px 0px 28px 0px;
+    line-height: 33.6px;
+  }
+
+  .title2 {
+    margin: 40px 0px 20px 0px;
+  }
+
+  .subtitle {
+    width: 300px;
+    font-size: 16px;
+    line-height: 23.2px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .subtitle2 {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+}

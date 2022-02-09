@@ -1,0 +1,157 @@
+// main: main.scss
+
+.elips {
+  position: relative;
+  width: 241px;
+  height: 482px;
+}
+
+.elips__right {
+  position: absolute;
+  right: 0;
+}
+
+.main__section9 {
+  background-color: var(--primarygrey);
+
+  & .container {
+    position: relative;
+    background-color: var(--primarygrey);
+  }
+
+
+  &__content {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+.main__section9__content__gifts {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  right: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.gif {
+  margin-top: 8.5rem;
+
+  &__img {
+    animation: updown 2s ease infinite;
+  }
+
+  &__img--title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__img--title {
+    margin-top: -20px;
+  }
+
+  &__gift {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: var(--primarygreen);
+  }
+}
+
+.gifts--content {
+  text-align: center;
+  color: var(--primaryblack);
+
+  &__title {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 46px;
+    text-transform: uppercase;
+    line-height: 57.5px;
+    margin: 100px 0px 23px;
+  }
+
+  &__subtitle {
+    max-width: 355px;
+    font-size: 16px;
+    line-height: 21.6px;
+    margin-bottom: 40px;
+    opacity: .8;
+  }
+
+  &__btn {
+    @include info-btn(700, 'normal', 16px, 260px, 60px);
+    background-color: var(--primarybrown);
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .gif {
+    display: none;
+  }
+
+  .gifts--content {
+
+    &__title {
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+
+  .main__section9 {
+    padding: 0px 10px;
+  }
+
+  .gif {
+    display: none;
+  }
+
+  .gifts--content {
+
+    &__title {
+      font-size: 24px;
+      line-height: 32.2px;
+      margin: 80px 0px 20px
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .elips {
+    display: none;
+  }
+
+  .main__section9 {
+
+    &__content {
+      width: 100%;
+      max-width: 480px;
+      height: 410px;
+    }
+  }
+}
+
+// animation img
+@keyframes updown {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

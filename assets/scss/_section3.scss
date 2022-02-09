@@ -1,0 +1,96 @@
+// main: main.scss
+
+.main__section3 {
+  background-color: var(--primarygreen);
+  color: var(--primarywhite);
+  padding: 100px 20px;
+
+  &__content {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  & .main__section3__title {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  @media screen and (max-width: 640px) {
+    & .main__section3__title {
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 438px) {
+    & .main__section3__title {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main__section3 {
+    padding: 80px 10px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 438px) {
+  .main__section3 {
+    padding: 80px 20px;
+  }
+}
+
+.main__section3__content__icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  border: 1px solid var(--primarygreen);
+
+  & .icon {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33%;
+    min-width: 197.33px;
+
+    &__img {
+      width: 68px;
+      height: 68px;
+
+      & img {
+        object-fit: fill;
+      }
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    @media screen and (max-width: 999px) {
+      &__subtitle {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .main__section3__content__icons {
+    column-gap: 30px;
+
+    & .icon {
+      min-width: 130px;
+    }
+  }
+}
+
+@media screen and (max-width: 632px) {
+  .main__section3__content__icons {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,38 @@
+// main: main.scss
+@mixin info-btn($weight, $style, $size, $width, $height) {
+  font-family: "Raleway", sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+  width: $width;
+  height: $height;
+  color: var(--primarywhite);
+}
+
+@mixin popup($width, $max-width, $text-align, $padding-top, $padding-bottom, $z-index) {
+  width: $width;
+  max-width: $max-width;
+  text-align: $text-align;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  z-index: $z-index;
+}
+
+@mixin popup-title($font-size, $line-height, $margin-bottom) {
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-bottom: $margin-bottom;
+}
+
+@mixin popup-subtitle($width, $font-size, $line-height, $opacity) {
+  width: $width;
+  font-size: $font-size;
+  line-height: $line-height;
+  opacity: $opacity;
+}
+
+@mixin popup-input($width, $background, $font-size) {
+  width: $width;
+  background: $background;
+  font-size: $font-size;
+}

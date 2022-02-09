@@ -1,0 +1,11 @@
+// main: main.scss
+
+.project--form__btn2 {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 425px) and (max-width: 748px) {
+  .main__section6-2__img img {
+    object-position: center;
+  }
+}
